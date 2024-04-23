@@ -157,7 +157,91 @@
         </div>
       </div>
     </q-page>
-
+    <div class="mobile-view" style="margin-left: 30px">
+      <div class="flex" style="gap: 10px">
+        <span>
+          <svg
+            width="14"
+            height="14"
+            viewBox="0 0 20 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect width="20" height="20" rx="6" fill="#E8ECFF" />
+            <path
+              d="M14.6666 6.5L8.24992 12.9167L5.33325 10"
+              stroke="#2C599B"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <span class="small-content"> 한국어 능력</span>
+        </span>
+        <span style="margin-left: 5px">
+          <svg
+            width="14"
+            height="14"
+            viewBox="0 0 20 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect width="20" height="20" rx="6" fill="#E8ECFF" />
+            <path
+              d="M14.6666 6.5L8.24992 12.9167L5.33325 10"
+              stroke="#2C599B"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <span class="small-content"> 업무 수행 능력</span>
+        </span>
+      </div>
+      <div class="flex" style="gap: 10px">
+        <span>
+          <svg
+            width="14"
+            height="14"
+            viewBox="0 0 20 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect width="20" height="20" rx="6" fill="#E8ECFF" />
+            <path
+              d="M14.6666 6.5L8.24992 12.9167L5.33325 10"
+              stroke="#2C599B"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <span class="small-content">겸업 여부</span>
+        </span>
+        <span style="margin-left: 20px">
+          <svg
+            width="14"
+            height="14"
+            viewBox="0 0 20 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect width="20" height="20" rx="6" fill="#E8ECFF" />
+            <path
+              d="M14.6666 6.5L8.24992 12.9167L5.33325 10"
+              stroke="#2C599B"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <span class="small-content"> 평판 조회</span>
+        </span>
+      </div>
+      <div style="font-weight: 700; color: #fbff23; text-decoration: underline">
+        개발자가 필요하신가요?
+      </div>
+    </div>
     <div
       class="swiper-cards-container"
       style="padding-bottom: 80px; margin-top: -30px"
@@ -185,6 +269,7 @@ import swiperCards from '../layouts/swiper-cards.vue';
 
 .carosul {
   display: flex;
+  padding-left: 20px;
 }
 
 /* Style for salary-section */
@@ -232,6 +317,15 @@ import swiperCards from '../layouts/swiper-cards.vue';
   overflow-x: hidden;
   position: absolute;
 }
+.small-content {
+  font-size: 12px;
+  color: white;
+  font-weight: 800;
+  background-color: transparent;
+}
+.mobile-view {
+  display: none;
+}
 /* Media query to hide swiper cards on mobile screens */
 @media only screen and (max-width: 600px) {
   .swiper-cards-container {
@@ -244,14 +338,23 @@ import swiperCards from '../layouts/swiper-cards.vue';
     display: none;
   }
   .text-container {
-    background-color: #8bc4ff !important; 
-    color: white !important;/* Change background color for mobile screens */
+    background-color: #8bc4ff !important;
+    color: white !important; /* Change background color for mobile screens */
   }
 }
 @media only screen and (max-width: 600px) {
   .arrow-down {
     color: #8bc4ff;
   }
+}
+@media only screen and (max-width: 600px) {
+  .mobile-view {
+    display: none;
+  }
 
+  .mobile-view {
+    display: block;
+    padding-bottom: 40px !important;
+  }
 }
 </style>
